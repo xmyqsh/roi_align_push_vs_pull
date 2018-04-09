@@ -1,15 +1,25 @@
 ## Main Configuration
 
 GPU: 2 x GTX1080
+
 BaseNet: ResNet50 + FPN
+
 BASE_LR: 0.0025
+
 GAMMA: 0.1
+
 MAX_ITER: 96000
+
 STEPS: [0, 72000]
-### Scale fixed according to GPU memory
+
+#### Scale fixed according to GPU memory
+
 Train SCALES: 800~960
+
 Test SCALES: 960
+
 MAX_SIZE: 1920
+
 
 ## Instance Seg Results
 
@@ -18,8 +28,8 @@ MAX_SIZE: 1920
 | push version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 31.0    | 58.3    | 0.73s / iter  |
 | pull version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 30.0    | 57.1    | 2.19s / iter  |
 
-push version:
-|----------------|--------------------|-----------|
+#### push version:
+
 | what           |             AP     |   AP_50%  |
 |----------------|--------------------|-----------|
 | person         |          0.297     |    0.627  |
@@ -33,7 +43,8 @@ push version:
 |----------------|--------------------|-----------|
 | average        |          0.310     |    0.583  |
 
-pull version:
+#### pull version:
+
 |----------------|--------------------|-----------|
 | what           |             AP     |   AP_50%  |
 |----------------|--------------------|-----------|
