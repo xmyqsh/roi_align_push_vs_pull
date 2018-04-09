@@ -1,0 +1,464 @@
+nohup: ignoring input
+E0408 01:08:30.804831 16504 init_intrinsics_check.cc:54] CPU feature avx is present on your machine, but the Caffe2 binary is not compiled with it. It means you may not get the full speed of your CPU.
+E0408 01:08:30.804857 16504 init_intrinsics_check.cc:54] CPU feature avx2 is present on your machine, but the Caffe2 binary is not compiled with it. It means you may not get the full speed of your CPU.
+E0408 01:08:30.804860 16504 init_intrinsics_check.cc:54] CPU feature fma is present on your machine, but the Caffe2 binary is not compiled with it. It means you may not get the full speed of your CPU.
+INFO train_net.py: 104: Called with args:
+INFO train_net.py: 105: Namespace(cfg_file='configs/12_2017_baselines/cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.yaml', multi_gpu_testing=False, opts=['OUTPUT_DIR', '/data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version'], skip_test=False)
+INFO train_net.py: 111: Training with config:
+INFO train_net.py: 112: {'BBOX_XFORM_CLIP': 4.1351665567423561,
+ 'CLUSTER': {'ON_CLUSTER': False},
+ 'DATA_LOADER': {'NUM_THREADS': 2},
+ 'DEDUP_BOXES': 0.0625,
+ 'DOWNLOAD_CACHE': '/tmp/detectron-download-cache',
+ 'EPS': 1e-14,
+ 'EXPECTED_RESULTS': [],
+ 'EXPECTED_RESULTS_ATOL': 0.005,
+ 'EXPECTED_RESULTS_EMAIL': 'xmyqsh@gmail.com',
+ 'EXPECTED_RESULTS_RTOL': 0.1,
+ 'FAST_RCNN': {'MLP_HEAD_DIM': 1024,
+               'ROI_BOX_HEAD': 'fast_rcnn_heads.add_roi_2mlp_head',
+               'ROI_XFORM_METHOD': 'RoIAlign',
+               'ROI_XFORM_RESOLUTION': 7,
+               'ROI_XFORM_SAMPLING_RATIO': 2},
+ 'FPN': {'COARSEST_STRIDE': 32,
+         'DIM': 256,
+         'EXTRA_CONV_LEVELS': False,
+         'FPN_ON': True,
+         'MULTILEVEL_ROIS': True,
+         'MULTILEVEL_RPN': True,
+         'ROI_CANONICAL_LEVEL': 4,
+         'ROI_CANONICAL_SCALE': 224,
+         'ROI_MAX_LEVEL': 5,
+         'ROI_MIN_LEVEL': 2,
+         'RPN_ANCHOR_START_SIZE': 32,
+         'RPN_ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_MAX_LEVEL': 6,
+         'RPN_MIN_LEVEL': 2,
+         'ZERO_INIT_LATERAL': False},
+ 'KRCNN': {'CONV_HEAD_DIM': 256,
+           'CONV_HEAD_KERNEL': 3,
+           'CONV_INIT': 'GaussianFill',
+           'DECONV_DIM': 256,
+           'DECONV_KERNEL': 4,
+           'DILATION': 1,
+           'HEATMAP_SIZE': -1,
+           'INFERENCE_MIN_SIZE': 0,
+           'KEYPOINT_CONFIDENCE': 'bbox',
+           'LOSS_WEIGHT': 1.0,
+           'MIN_KEYPOINT_COUNT_FOR_VALID_MINIBATCH': 20,
+           'NMS_OKS': False,
+           'NORMALIZE_BY_VISIBLE_KEYPOINTS': True,
+           'NUM_KEYPOINTS': -1,
+           'NUM_STACKED_CONVS': 8,
+           'ROI_KEYPOINTS_HEAD': '',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 7,
+           'ROI_XFORM_SAMPLING_RATIO': 0,
+           'UP_SCALE': -1,
+           'USE_DECONV': False,
+           'USE_DECONV_OUTPUT': False},
+ 'MATLAB': 'matlab',
+ 'MEMONGER': True,
+ 'MEMONGER_SHARE_ACTIVATIONS': True,
+ 'MODEL': {'BBOX_REG_WEIGHTS': (10.0, 10.0, 5.0, 5.0),
+           'CLS_AGNOSTIC_BBOX_REG': False,
+           'CONV_BODY': 'FPN.add_fpn_ResNet50_conv5_body',
+           'EXECUTION_TYPE': 'dag',
+           'FASTER_RCNN': True,
+           'KEYPOINTS_ON': False,
+           'MASK_ON': True,
+           'NUM_CLASSES': 9,
+           'RPN_ONLY': False,
+           'TYPE': 'generalized_rcnn'},
+ 'MRCNN': {'CLS_SPECIFIC_MASK': True,
+           'CONV_INIT': 'MSRAFill',
+           'DILATION': 1,
+           'DIM_REDUCED': 256,
+           'RESOLUTION': 28,
+           'ROI_MASK_HEAD': 'mask_rcnn_heads.mask_rcnn_fcn_head_v1up4convs',
+           'ROI_XFORM_METHOD': 'RoIAlign',
+           'ROI_XFORM_RESOLUTION': 14,
+           'ROI_XFORM_SAMPLING_RATIO': 2,
+           'THRESH_BINARIZE': 0.5,
+           'UPSAMPLE_RATIO': 1,
+           'USE_FC_OUTPUT': False,
+           'WEIGHT_LOSS_MASK': 1.0},
+ 'NUM_GPUS': 2,
+ 'OUTPUT_DIR': '/data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version',
+ 'PIXEL_MEANS': array([[[ 102.9801,  115.9465,  122.7717]]]),
+ 'RESNETS': {'NUM_GROUPS': 1,
+             'RES5_DILATION': 1,
+             'STRIDE_1X1': True,
+             'TRANS_FUNC': 'bottleneck_transformation',
+             'WIDTH_PER_GROUP': 64},
+ 'RETINANET': {'ANCHOR_SCALE': 4,
+               'ASPECT_RATIOS': (0.5, 1.0, 2.0),
+               'BBOX_REG_BETA': 0.11,
+               'BBOX_REG_WEIGHT': 1.0,
+               'CLASS_SPECIFIC_BBOX': False,
+               'INFERENCE_TH': 0.05,
+               'LOSS_ALPHA': 0.25,
+               'LOSS_GAMMA': 2.0,
+               'NEGATIVE_OVERLAP': 0.4,
+               'NUM_CONVS': 4,
+               'POSITIVE_OVERLAP': 0.5,
+               'PRE_NMS_TOP_N': 1000,
+               'PRIOR_PROB': 0.01,
+               'RETINANET_ON': False,
+               'SCALES_PER_OCTAVE': 3,
+               'SHARE_CLS_BBOX_TOWER': False,
+               'SOFTMAX': False},
+ 'RFCN': {'PS_GRID_SIZE': 3},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/home/xmyqsh/project/caffe2/Detectron',
+ 'RPN': {'ASPECT_RATIOS': (0.5, 1, 2),
+         'RPN_ON': True,
+         'SIZES': (64, 128, 256, 512),
+         'STRIDE': 16},
+ 'SOLVER': {'BASE_LR': 0.0025,
+            'GAMMA': 0.1,
+            'LOG_LR_CHANGE_THRESHOLD': 1.1,
+            'LRS': [],
+            'LR_POLICY': 'steps_with_decay',
+            'MAX_ITER': 96000,
+            'MOMENTUM': 0.9,
+            'SCALE_MOMENTUM': True,
+            'SCALE_MOMENTUM_THRESHOLD': 1.1,
+            'STEPS': [0, 72000],
+            'STEP_SIZE': 30000,
+            'WARM_UP_FACTOR': 0.3333333333333333,
+            'WARM_UP_ITERS': 500,
+            'WARM_UP_METHOD': u'linear',
+            'WEIGHT_DECAY': 0.0001},
+ 'TEST': {'BBOX_AUG': {'AREA_TH_HI': 32400,
+                       'AREA_TH_LO': 2500,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'COORD_HEUR': 'UNION',
+                       'ENABLED': False,
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False,
+                       'SCORE_HEUR': 'UNION'},
+          'BBOX_REG': True,
+          'BBOX_VOTE': {'ENABLED': False,
+                        'SCORING_METHOD': 'ID',
+                        'SCORING_METHOD_BETA': 1.0,
+                        'VOTE_TH': 0.8},
+          'COMPETITION_MODE': True,
+          'DATASET': '',
+          'DATASETS': ('cityscapes_fine_instanceonly_seg_val',),
+          'DETECTIONS_PER_IM': 100,
+          'FORCE_JSON_DATASET_EVAL': False,
+          'KPS_AUG': {'AREA_TH': 32400,
+                      'ASPECT_RATIOS': (),
+                      'ASPECT_RATIO_H_FLIP': False,
+                      'ENABLED': False,
+                      'HEUR': 'HM_AVG',
+                      'H_FLIP': False,
+                      'MAX_SIZE': 4000,
+                      'SCALES': (),
+                      'SCALE_H_FLIP': False,
+                      'SCALE_SIZE_DEP': False},
+          'MASK_AUG': {'AREA_TH': 32400,
+                       'ASPECT_RATIOS': (),
+                       'ASPECT_RATIO_H_FLIP': False,
+                       'ENABLED': False,
+                       'HEUR': 'SOFT_AVG',
+                       'H_FLIP': False,
+                       'MAX_SIZE': 4000,
+                       'SCALES': (),
+                       'SCALE_H_FLIP': False,
+                       'SCALE_SIZE_DEP': False},
+          'MAX_SIZE': 1920,
+          'NMS': 0.5,
+          'PRECOMPUTED_PROPOSALS': False,
+          'PROPOSAL_FILE': '',
+          'PROPOSAL_FILES': (),
+          'PROPOSAL_LIMIT': 2000,
+          'RPN_MIN_SIZE': 0,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 1000,
+          'RPN_PRE_NMS_TOP_N': 1000,
+          'SCALES': (960,),
+          'SCORE_THRESH': 0.05,
+          'SOFT_NMS': {'ENABLED': False, 'METHOD': 'linear', 'SIGMA': 0.5},
+          'WEIGHTS': ''},
+ 'TRAIN': {'ASPECT_GROUPING': True,
+           'AUTO_RESUME': True,
+           'BATCH_SIZE_PER_IM': 512,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'CROWD_FILTER_THRESH': 0.7,
+           'DATASETS': ('cityscapes_fine_instanceonly_seg_train',),
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FREEZE_CONV_BODY': False,
+           'GT_MIN_AREA': -1,
+           'IMS_PER_BATCH': 1,
+           'MAX_SIZE': 1920,
+           'PROPOSAL_FILES': (),
+           'RPN_BATCH_SIZE_PER_IM': 256,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_MIN_SIZE': 0,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 2000,
+           'RPN_STRADDLE_THRESH': 0,
+           'SCALES': (800, 832, 864, 896, 928, 960),
+           'SNAPSHOT_ITERS': 20000,
+           'USE_FLIPPED': True,
+           'WEIGHTS': u'/tmp/detectron-download-cache/ImageNetPretrained/MSRA/R-50.pkl'},
+ 'USE_NCCL': False,
+ 'VIS': False,
+ 'VIS_TH': 0.9}
+INFO train_net.py: 183: model_final.pkl exists; no need to train!
+loading annotations into memory...
+Done (t=0.48s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.60s)
+creating index...
+index created!
+WARNING cnn.py:  40: [====DEPRECATE WARNING====]: you are creating an object from CNNModelHelper class which will be deprecated soon. Please use ModelHelper object with brew module. For more information, please refer to caffe2.ai and python/brew.py, python/brew_test.py for more information.
+INFO net.py:  57: Loading weights from: /data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version/train/cityscapes_fine_instanceonly_seg_train/generalized_rcnn/model_final.pkl
+I0408 01:08:33.655376 16504 context_gpu.cu:321] GPU 0: 136 MB
+I0408 01:08:33.655395 16504 context_gpu.cu:325] Total: 136 MB
+I0408 01:08:33.696923 16504 context_gpu.cu:321] GPU 0: 306 MB
+I0408 01:08:33.696939 16504 context_gpu.cu:325] Total: 306 MB
+I0408 01:08:33.746971 16504 net_dag_utils.cc:118] Operator graph pruning prior to chain compute took: 7.6037e-05 secs
+I0408 01:08:33.747097 16504 net_dag.cc:61] Number of parallel execution chains 63 Number of operators = 232
+I0408 01:08:33.757560 16504 net_dag_utils.cc:118] Operator graph pruning prior to chain compute took: 5.8751e-05 secs
+I0408 01:08:33.757648 16504 net_dag.cc:61] Number of parallel execution chains 30 Number of operators = 188
+I0408 01:08:33.758824 16504 net_dag_utils.cc:118] Operator graph pruning prior to chain compute took: 8.2e-06 secs
+I0408 01:08:33.758846 16504 net_dag.cc:61] Number of parallel execution chains 5 Number of operators = 18
+I0408 01:08:34.187685 16534 context_gpu.cu:321] GPU 0: 468 MB
+I0408 01:08:34.187708 16534 context_gpu.cu:325] Total: 468 MB
+I0408 01:08:34.200465 16531 context_gpu.cu:321] GPU 0: 639 MB
+I0408 01:08:34.200480 16531 context_gpu.cu:325] Total: 639 MB
+I0408 01:08:34.202111 16531 context_gpu.cu:321] GPU 0: 780 MB
+I0408 01:08:34.202119 16531 context_gpu.cu:325] Total: 780 MB
+I0408 01:08:34.206080 16534 context_gpu.cu:321] GPU 0: 1005 MB
+I0408 01:08:34.206090 16534 context_gpu.cu:325] Total: 1005 MB
+I0408 01:08:34.213907 16534 context_gpu.cu:321] GPU 0: 1174 MB
+I0408 01:08:34.213915 16534 context_gpu.cu:325] Total: 1174 MB
+I0408 01:08:34.219285 16534 context_gpu.cu:321] GPU 0: 1314 MB
+I0408 01:08:34.219292 16534 context_gpu.cu:325] Total: 1314 MB
+I0408 01:08:34.223136 16534 context_gpu.cu:321] GPU 0: 1455 MB
+I0408 01:08:34.223145 16534 context_gpu.cu:325] Total: 1455 MB
+I0408 01:08:34.225978 16534 context_gpu.cu:321] GPU 0: 1680 MB
+I0408 01:08:34.225986 16534 context_gpu.cu:325] Total: 1680 MB
+I0408 01:08:34.231150 16530 context_gpu.cu:321] GPU 0: 1863 MB
+I0408 01:08:34.231161 16530 context_gpu.cu:325] Total: 1863 MB
+I0408 01:08:34.238638 16534 context_gpu.cu:321] GPU 0: 2045 MB
+I0408 01:08:34.238647 16534 context_gpu.cu:325] Total: 2045 MB
+I0408 01:08:34.244633 16534 context_gpu.cu:321] GPU 0: 2186 MB
+I0408 01:08:34.244642 16534 context_gpu.cu:325] Total: 2186 MB
+I0408 01:08:34.250593 16534 context_gpu.cu:321] GPU 0: 2327 MB
+I0408 01:08:34.250602 16534 context_gpu.cu:325] Total: 2327 MB
+I0408 01:08:34.256508 16534 context_gpu.cu:321] GPU 0: 2467 MB
+I0408 01:08:34.256516 16534 context_gpu.cu:325] Total: 2467 MB
+I0408 01:08:34.263361 16533 context_gpu.cu:321] GPU 0: 2623 MB
+I0408 01:08:34.263373 16533 context_gpu.cu:325] Total: 2623 MB
+I0408 01:08:34.272215 16534 context_gpu.cu:321] GPU 0: 2757 MB
+I0408 01:08:34.272225 16534 context_gpu.cu:325] Total: 2757 MB
+I0408 01:08:34.280351 16534 context_gpu.cu:321] GPU 0: 2891 MB
+I0408 01:08:34.280359 16534 context_gpu.cu:325] Total: 2891 MB
+I0408 01:08:34.289702 16534 context_gpu.cu:321] GPU 0: 3031 MB
+I0408 01:08:34.289711 16534 context_gpu.cu:325] Total: 3031 MB
+I0408 01:08:34.300526 16534 context_gpu.cu:321] GPU 0: 3163 MB
+I0408 01:08:34.300536 16534 context_gpu.cu:325] Total: 3163 MB
+I0408 01:08:34.309407 16534 context_gpu.cu:321] GPU 0: 3310 MB
+I0408 01:08:34.309417 16534 context_gpu.cu:325] Total: 3310 MB
+I0408 01:08:34.311251 16536 context_gpu.cu:321] GPU 0: 3450 MB
+I0408 01:08:34.311261 16536 context_gpu.cu:325] Total: 3450 MB
+I0408 01:08:34.316946 16530 context_gpu.cu:321] GPU 0: 3675 MB
+I0408 01:08:34.316959 16530 context_gpu.cu:325] Total: 3675 MB
+I0408 01:08:34.328606 16530 context_gpu.cu:321] GPU 0: 3823 MB
+I0408 01:08:34.328624 16530 context_gpu.cu:325] Total: 3823 MB
+I0408 01:08:34.370018 16532 context_gpu.cu:321] GPU 0: 3977 MB
+I0408 01:08:34.370038 16532 context_gpu.cu:325] Total: 3977 MB
+I0408 01:08:34.509281 16541 context_gpu.cu:321] GPU 0: 4109 MB
+I0408 01:08:34.509301 16541 context_gpu.cu:325] Total: 4109 MB
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 1/500 0.717s + 0.252s (eta: 0:08:03)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 11/500 0.252s + 0.173s (eta: 0:03:27)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 21/500 0.229s + 0.164s (eta: 0:03:08)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 31/500 0.221s + 0.165s (eta: 0:03:00)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 41/500 0.217s + 0.167s (eta: 0:02:56)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 51/500 0.214s + 0.162s (eta: 0:02:48)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 61/500 0.213s + 0.164s (eta: 0:02:45)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 71/500 0.211s + 0.162s (eta: 0:02:40)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 81/500 0.210s + 0.164s (eta: 0:02:37)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 91/500 0.209s + 0.161s (eta: 0:02:31)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 101/500 0.209s + 0.157s (eta: 0:02:25)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 111/500 0.208s + 0.160s (eta: 0:02:23)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 121/500 0.208s + 0.161s (eta: 0:02:19)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 131/500 0.208s + 0.162s (eta: 0:02:16)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 141/500 0.208s + 0.166s (eta: 0:02:13)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 151/500 0.208s + 0.167s (eta: 0:02:10)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 161/500 0.207s + 0.165s (eta: 0:02:06)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 171/500 0.207s + 0.168s (eta: 0:02:03)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 181/500 0.207s + 0.164s (eta: 0:01:58)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 191/500 0.206s + 0.159s (eta: 0:01:52)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 201/500 0.206s + 0.153s (eta: 0:01:47)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 211/500 0.206s + 0.149s (eta: 0:01:42)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 221/500 0.205s + 0.145s (eta: 0:01:37)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 231/500 0.205s + 0.142s (eta: 0:01:33)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 241/500 0.205s + 0.142s (eta: 0:01:29)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 251/500 0.205s + 0.145s (eta: 0:01:27)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 261/500 0.205s + 0.145s (eta: 0:01:23)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 271/500 0.205s + 0.147s (eta: 0:01:20)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 281/500 0.205s + 0.150s (eta: 0:01:17)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 291/500 0.205s + 0.151s (eta: 0:01:14)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 301/500 0.205s + 0.150s (eta: 0:01:10)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 311/500 0.205s + 0.151s (eta: 0:01:07)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 321/500 0.205s + 0.151s (eta: 0:01:03)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 331/500 0.205s + 0.151s (eta: 0:01:00)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 341/500 0.205s + 0.152s (eta: 0:00:56)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 351/500 0.205s + 0.153s (eta: 0:00:53)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 361/500 0.205s + 0.154s (eta: 0:00:49)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 371/500 0.205s + 0.155s (eta: 0:00:46)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 381/500 0.205s + 0.155s (eta: 0:00:42)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 391/500 0.205s + 0.156s (eta: 0:00:39)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 401/500 0.205s + 0.158s (eta: 0:00:35)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 411/500 0.205s + 0.158s (eta: 0:00:32)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 421/500 0.205s + 0.159s (eta: 0:00:28)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 431/500 0.205s + 0.160s (eta: 0:00:25)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 441/500 0.205s + 0.160s (eta: 0:00:21)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 451/500 0.205s + 0.161s (eta: 0:00:17)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 461/500 0.205s + 0.162s (eta: 0:00:14)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 471/500 0.205s + 0.161s (eta: 0:00:10)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 481/500 0.205s + 0.162s (eta: 0:00:06)
+INFO test_engine.py: 222: im_detect: range [1, 500] of 500: 491/500 0.205s + 0.162s (eta: 0:00:03)
+I0408 01:11:53.139477 16536 context_gpu.cu:321] GPU 0: 4237 MB
+I0408 01:11:53.139494 16536 context_gpu.cu:325] Total: 4237 MB
+INFO test_engine.py: 255: Wrote detections to: /data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version/test/cityscapes_fine_instanceonly_seg_val/generalized_rcnn/detections.pkl
+INFO test_engine.py: 108: Total inference time: 202.289s
+INFO task_evaluation.py:  75: Evaluating detections
+WARNING task_evaluation.py:  83: Cityscapes bbox evaluated using COCO metrics/conversions
+INFO json_dataset_evaluator.py: 162: Writing bbox results json to: /data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version/test/cityscapes_fine_instanceonly_seg_val/generalized_rcnn/bbox_cityscapes_fine_instanceonly_seg_val_results.json
+Loading and preparing results...
+DONE (t=0.07s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.95s).
+Accumulating evaluation results...
+DONE (t=0.23s).
+INFO json_dataset_evaluator.py: 222: ~~~~ Mean and per-category AP @ IoU=[0.50,0.95] ~~~~
+INFO json_dataset_evaluator.py: 223: 34.7
+INFO json_dataset_evaluator.py: 231: 26.4
+INFO json_dataset_evaluator.py: 231: 24.8
+INFO json_dataset_evaluator.py: 231: 51.1
+INFO json_dataset_evaluator.py: 231: 37.2
+INFO json_dataset_evaluator.py: 231: 55.3
+INFO json_dataset_evaluator.py: 231: 37.3
+INFO json_dataset_evaluator.py: 231: 30.7
+INFO json_dataset_evaluator.py: 231: 14.5
+INFO json_dataset_evaluator.py: 232: ~~~~ Summary metrics ~~~~
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.347
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.600
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.352
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.133
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.355
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.246
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.412
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.440
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.195
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.433
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.644
+INFO json_dataset_evaluator.py: 199: Wrote json eval results to: /data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version/test/cityscapes_fine_instanceonly_seg_val/generalized_rcnn/detection_results.pkl
+INFO task_evaluation.py:  61: Evaluating bounding boxes is done!
+INFO task_evaluation.py: 104: Evaluating segmentations
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 0: munster_000040_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 10: munster_000146_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 20: munster_000099_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 30: munster_000129_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 40: munster_000044_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 50: munster_000002_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 60: munster_000046_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 70: munster_000076_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 80: munster_000159_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 90: munster_000081_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 100: munster_000142_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 110: munster_000059_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 120: munster_000017_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 130: munster_000023_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 140: munster_000132_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 150: munster_000028_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 160: munster_000151_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 170: munster_000072_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 180: lindau_000003_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 190: lindau_000010_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 200: lindau_000032_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 210: lindau_000008_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 220: lindau_000027_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 230: lindau_000053_000019_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 240: frankfurt_000000_007365_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 250: frankfurt_000000_005543_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 260: frankfurt_000001_080830_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 270: frankfurt_000001_055387_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 280: frankfurt_000001_052120_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 290: frankfurt_000000_002196_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 300: frankfurt_000001_023369_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 310: frankfurt_000001_049298_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 320: frankfurt_000001_016462_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 330: frankfurt_000000_011007_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 340: frankfurt_000001_003588_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 350: frankfurt_000001_012699_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 360: frankfurt_000001_082466_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 370: frankfurt_000001_017101_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 380: frankfurt_000001_010830_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 390: frankfurt_000001_030669_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 400: frankfurt_000000_009291_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 410: frankfurt_000001_077233_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 420: frankfurt_000001_044525_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 430: frankfurt_000001_076502_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 440: frankfurt_000000_013240_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 450: frankfurt_000001_038645_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 460: frankfurt_000000_001751_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 470: frankfurt_000000_011074_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 480: frankfurt_000001_042098_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  74: i: 490: frankfurt_000001_043564_leftImg8bit
+INFO cityscapes_json_dataset_evaluator.py:  94: Evaluating...
+args:
+<cityscapesscripts.evaluation.evalInstanceLevelSemanticLabeling.CArgs object at 0x7f87cf3d0fd0>
+argv:
+['--cfg', 'configs/12_2017_baselines/cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.yaml', 'OUTPUT_DIR', '/data2/tmp/detectron-output-cityscapes_e2e_mask_rcnn_R-50-FPN_1x_2gpu.pull_version']
+Note that this tool uses the file '/home/xmyqsh/usr/cityscapesScripts/cityscapesscripts/evaluation/gtInstances.json' to cache the ground truth instances.
+If anything goes wrong, or if you change the ground truth, please delete the file.
+Loading ground truth instances from JSON.
+Matching 500 pairs of images...
+Images Processed: 1 Images Processed: 2 Images Processed: 3 Images Processed: 4 Images Processed: 5 Images Processed: 6 Images Processed: 7 Images Processed: 8 Images Processed: 9 Images Processed: 10 Images Processed: 11 Images Processed: 12 Images Processed: 13 Images Processed: 14 Images Processed: 15 Images Processed: 16 Images Processed: 17 Images Processed: 18 Images Processed: 19 Images Processed: 20 Images Processed: 21 Images Processed: 22 Images Processed: 23 Images Processed: 24 Images Processed: 25 Images Processed: 26 Images Processed: 27 Images Processed: 28 Images Processed: 29 Images Processed: 30 Images Processed: 31 Images Processed: 32 Images Processed: 33 Images Processed: 34 Images Processed: 35 Images Processed: 36 Images Processed: 37 Images Processed: 38 Images Processed: 39 Images Processed: 40 Images Processed: 41 Images Processed: 42 Images Processed: 43 Images Processed: 44 Images Processed: 45 Images Processed: 46 Images Processed: 47 Images Processed: 48 Images Processed: 49 Images Processed: 50 Images Processed: 51 Images Processed: 52 Images Processed: 53 Images Processed: 54 Images Processed: 55 Images Processed: 56 Images Processed: 57 Images Processed: 58 Images Processed: 59 Images Processed: 60 Images Processed: 61 Images Processed: 62 Images Processed: 63 Images Processed: 64 Images Processed: 65 Images Processed: 66 Images Processed: 67 Images Processed: 68 Images Processed: 69 Images Processed: 70 Images Processed: 71 Images Processed: 72 Images Processed: 73 Images Processed: 74 Images Processed: 75 Images Processed: 76 Images Processed: 77 Images Processed: 78 Images Processed: 79 Images Processed: 80 Images Processed: 81 Images Processed: 82 Images Processed: 83 Images Processed: 84 Images Processed: 85 Images Processed: 86 Images Processed: 87 Images Processed: 88 Images Processed: 89 Images Processed: 90 Images Processed: 91 Images Processed: 92 Images Processed: 93 Images Processed: 94 Images Processed: 95 Images Processed: 96 Images Processed: 97 Images Processed: 98 Images Processed: 99 Images Processed: 100 Images Processed: 101 Images Processed: 102 Images Processed: 103 Images Processed: 104 Images Processed: 105 Images Processed: 106 Images Processed: 107 Images Processed: 108 Images Processed: 109 Images Processed: 110 Images Processed: 111 Images Processed: 112 Images Processed: 113 Images Processed: 114 Images Processed: 115 Images Processed: 116 Images Processed: 117 Images Processed: 118 Images Processed: 119 Images Processed: 120 Images Processed: 121 Images Processed: 122 Images Processed: 123 Images Processed: 124 Images Processed: 125 Images Processed: 126 Images Processed: 127 Images Processed: 128 Images Processed: 129 Images Processed: 130 Images Processed: 131 Images Processed: 132 Images Processed: 133 Images Processed: 134 Images Processed: 135 Images Processed: 136 Images Processed: 137 Images Processed: 138 Images Processed: 139 Images Processed: 140 Images Processed: 141 Images Processed: 142 Images Processed: 143 Images Processed: 144 Images Processed: 145 Images Processed: 146 Images Processed: 147 Images Processed: 148 Images Processed: 149 Images Processed: 150 Images Processed: 151 Images Processed: 152 Images Processed: 153 Images Processed: 154 Images Processed: 155 Images Processed: 156 Images Processed: 157 Images Processed: 158 Images Processed: 159 Images Processed: 160 Images Processed: 161 Images Processed: 162 Images Processed: 163 Images Processed: 164 Images Processed: 165 Images Processed: 166 Images Processed: 167 Images Processed: 168 Images Processed: 169 Images Processed: 170 Images Processed: 171 Images Processed: 172 Images Processed: 173 Images Processed: 174 Images Processed: 175 Images Processed: 176 Images Processed: 177 Images Processed: 178 Images Processed: 179 Images Processed: 180 Images Processed: 181 Images Processed: 182 Images Processed: 183 Images Processed: 184 Images Processed: 185 Images Processed: 186 Images Processed: 187 Images Processed: 188 Images Processed: 189 Images Processed: 190 Images Processed: 191 Images Processed: 192 Images Processed: 193 Images Processed: 194 Images Processed: 195 Images Processed: 196 Images Processed: 197 Images Processed: 198 Images Processed: 199 Images Processed: 200 Images Processed: 201 Images Processed: 202 Images Processed: 203 Images Processed: 204 Images Processed: 205 Images Processed: 206 Images Processed: 207 Images Processed: 208 Images Processed: 209 Images Processed: 210 Images Processed: 211 Images Processed: 212 Images Processed: 213 Images Processed: 214 Images Processed: 215 Images Processed: 216 Images Processed: 217 Images Processed: 218 Images Processed: 219 Images Processed: 220 Images Processed: 221 Images Processed: 222 Images Processed: 223 Images Processed: 224 Images Processed: 225 Images Processed: 226 Images Processed: 227 Images Processed: 228 Images Processed: 229 Images Processed: 230 Images Processed: 231 Images Processed: 232 Images Processed: 233 Images Processed: 234 Images Processed: 235 Images Processed: 236 Images Processed: 237 Images Processed: 238 Images Processed: 239 Images Processed: 240 Images Processed: 241 Images Processed: 242 Images Processed: 243 Images Processed: 244 Images Processed: 245 Images Processed: 246 Images Processed: 247 Images Processed: 248 Images Processed: 249 Images Processed: 250 Images Processed: 251 Images Processed: 252 Images Processed: 253 Images Processed: 254 Images Processed: 255 Images Processed: 256 Images Processed: 257 Images Processed: 258 Images Processed: 259 Images Processed: 260 Images Processed: 261 Images Processed: 262 Images Processed: 263 Images Processed: 264 Images Processed: 265 Images Processed: 266 Images Processed: 267 Images Processed: 268 Images Processed: 269 Images Processed: 270 Images Processed: 271 Images Processed: 272 Images Processed: 273 Images Processed: 274 Images Processed: 275 Images Processed: 276 Images Processed: 277 Images Processed: 278 Images Processed: 279 Images Processed: 280 Images Processed: 281 Images Processed: 282 Images Processed: 283 Images Processed: 284 Images Processed: 285 Images Processed: 286 Images Processed: 287 Images Processed: 288 Images Processed: 289 Images Processed: 290 Images Processed: 291 Images Processed: 292 Images Processed: 293 Images Processed: 294 Images Processed: 295 Images Processed: 296 Images Processed: 297 Images Processed: 298 Images Processed: 299 Images Processed: 300 Images Processed: 301 Images Processed: 302 Images Processed: 303 Images Processed: 304 Images Processed: 305 Images Processed: 306 Images Processed: 307 Images Processed: 308 Images Processed: 309 Images Processed: 310 Images Processed: 311 Images Processed: 312 Images Processed: 313 Images Processed: 314 Images Processed: 315 Images Processed: 316 Images Processed: 317 Images Processed: 318 Images Processed: 319 Images Processed: 320 Images Processed: 321 Images Processed: 322 Images Processed: 323 Images Processed: 324 Images Processed: 325 Images Processed: 326 Images Processed: 327 Images Processed: 328 Images Processed: 329 Images Processed: 330 Images Processed: 331 Images Processed: 332 Images Processed: 333 Images Processed: 334 Images Processed: 335 Images Processed: 336 Images Processed: 337 Images Processed: 338 Images Processed: 339 Images Processed: 340 Images Processed: 341 Images Processed: 342 Images Processed: 343 Images Processed: 344 Images Processed: 345 Images Processed: 346 Images Processed: 347 Images Processed: 348 Images Processed: 349 Images Processed: 350 Images Processed: 351 Images Processed: 352 Images Processed: 353 Images Processed: 354 Images Processed: 355 Images Processed: 356 Images Processed: 357 Images Processed: 358 Images Processed: 359 Images Processed: 360 Images Processed: 361 Images Processed: 362 Images Processed: 363 Images Processed: 364 Images Processed: 365 Images Processed: 366 Images Processed: 367 Images Processed: 368 Images Processed: 369 Images Processed: 370 Images Processed: 371 Images Processed: 372 Images Processed: 373 Images Processed: 374 Images Processed: 375 Images Processed: 376 Images Processed: 377 Images Processed: 378 Images Processed: 379 Images Processed: 380 Images Processed: 381 Images Processed: 382 Images Processed: 383 Images Processed: 384 Images Processed: 385 Images Processed: 386 Images Processed: 387 Images Processed: 388 Images Processed: 389 Images Processed: 390 Images Processed: 391 Images Processed: 392 Images Processed: 393 Images Processed: 394 Images Processed: 395 Images Processed: 396 Images Processed: 397 Images Processed: 398 Images Processed: 399 Images Processed: 400 Images Processed: 401 Images Processed: 402 Images Processed: 403 Images Processed: 404 Images Processed: 405 Images Processed: 406 Images Processed: 407 Images Processed: 408 Images Processed: 409 Images Processed: 410 Images Processed: 411 Images Processed: 412 Images Processed: 413 Images Processed: 414 Images Processed: 415 Images Processed: 416 Images Processed: 417 Images Processed: 418 Images Processed: 419 Images Processed: 420 Images Processed: 421 Images Processed: 422 Images Processed: 423 Images Processed: 424 Images Processed: 425 Images Processed: 426 Images Processed: 427 Images Processed: 428 Images Processed: 429 Images Processed: 430 Images Processed: 431 Images Processed: 432 Images Processed: 433 Images Processed: 434 Images Processed: 435 Images Processed: 436 Images Processed: 437 Images Processed: 438 Images Processed: 439 Images Processed: 440 Images Processed: 441 Images Processed: 442 Images Processed: 443 Images Processed: 444 Images Processed: 445 Images Processed: 446 Images Processed: 447 Images Processed: 448 Images Processed: 449 Images Processed: 450 Images Processed: 451 Images Processed: 452 Images Processed: 453 Images Processed: 454 Images Processed: 455 Images Processed: 456 Images Processed: 457 Images Processed: 458 Images Processed: 459 Images Processed: 460 Images Processed: 461 Images Processed: 462 Images Processed: 463 Images Processed: 464 Images Processed: 465 Images Processed: 466 Images Processed: 467 Images Processed: 468 Images Processed: 469 Images Processed: 470 Images Processed: 471 Images Processed: 472 Images Processed: 473 Images Processed: 474 Images Processed: 475 Images Processed: 476 Images Processed: 477 Images Processed: 478 Images Processed: 479 Images Processed: 480 Images Processed: 481 Images Processed: 482 Images Processed: 483 Images Processed: 484 Images Processed: 485 Images Processed: 486 Images Processed: 487 Images Processed: 488 Images Processed: 489 Images Processed: 490 Images Processed: 491 Images Processed: 492 Images Processed: 493 Images Processed: 494 Images Processed: 495 Images Processed: 496 Images Processed: 497 Images Processed: 498 Images Processed: 499 Images Processed: 500 
+
+##################################################
+[1mwhat           :             AP         AP_50%[0m
+##################################################
+person         :[33;1m          0.297[36;1m          0.629[0m
+rider          :[33;1m          0.234[36;1m          0.626[0m
+car            :[34;1m          0.496[36;1m          0.749[0m
+truck          :[33;1m          0.296[34;1m          0.452[0m
+bus            :[34;1m          0.498[36;1m          0.694[0m
+train          :[33;1m          0.228[34;1m          0.488[0m
+motorcycle     :[31;1m          0.174[34;1m          0.429[0m
+bicycle        :[31;1m          0.174[34;1m          0.503[0m
+--------------------------------------------------
+average        :[33;1m          0.300[34;1m          0.571[0m
+
+None
+INFO task_evaluation.py:  65: Evaluating segmentations is done!
+INFO task_evaluation.py: 181: copypaste: Dataset: cityscapes_fine_instanceonly_seg_val
+INFO task_evaluation.py: 183: copypaste: Task: box
+INFO task_evaluation.py: 186: copypaste: AP,AP50,AP75,APs,APm,APl
+INFO task_evaluation.py: 187: copypaste: 0.3468,0.5996,0.3522,0.1334,0.3553,0.5173
+INFO task_evaluation.py: 183: copypaste: Task: mask
+INFO task_evaluation.py: 186: copypaste: AP,AP50,AP75,APs,APm,APl
+INFO task_evaluation.py: 187: copypaste: -1.0000,-1.0000,-1.0000,-1.0000,-1.0000,-1.0000
