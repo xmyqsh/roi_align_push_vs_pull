@@ -23,10 +23,10 @@ MAX_SIZE: 1920
 
 ## Instance Seg Results
 
-| ROI-Align    | training data               | testing data              | AP      | AP@0.5  | training time |
-|--------------|-----------------------------|---------------------------|---------|---------|---------------|
-| push version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 31.0    | 58.3    | 0.73s / iter  |
-| pull version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 30.0    | 57.1    | 2.19s / iter  |
+| ROI-Align    | training data               | testing data              | AP      | AP@0.5  | training time (2 x GTX1080)  |
+|--------------|-----------------------------|---------------------------|---------|---------|------------------------------|
+| push version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 31.0    | 58.3    | 0.73s / iter                 |
+| pull version | fine_instanceonly_seg_train | fine_instanceonly_seg_val | 30.0    | 57.1    | 2.19s / iter                 |
 
 #### push version:
 
@@ -58,8 +58,8 @@ MAX_SIZE: 1920
 
 ## Det Results
 
-| ROI-Align    | AP     | AP50   | AP75   |
-|--------------|-----------------|--------|
-| push version | 0.3593 | 0.6183 | 0.3607 |
-| pull version | 0.3468 | 0.5996 | 0.3522 |
+| ROI-Align    | AP     | AP50   | AP75   | APs    | APm    | APl    |
+|--------------|--------|--------|--------|--------|--------|--------|
+| push version | 0.3593 | 0.6183 | 0.3607 | 0.1464 | 0.3541 | 0.5446 |
+| pull version | 0.3468 | 0.5996 | 0.3522 | 0.1334 | 0.3553 | 0.5173 |
 
