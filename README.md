@@ -1,3 +1,8 @@
+
+Push Version is better than Pull Version, this is abnormal phenomenon for a qualified gpuer. But it can be explained by [An Analysis of Scale Invariance in Object Detection – SNIP](https://arxiv.org/abs/1711.08189) reasonablely.
+
+-----------------------------------
+
 ## Main Configuration
 
 GPU: 2 x GTX1080
