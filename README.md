@@ -1,5 +1,7 @@
 
-Push Version is better than Pull Version, this is abnormal phenomenon for a qualified gpuer. But it can be explained by [An Analysis of Scale Invariance in Object Detection – SNIP](https://arxiv.org/abs/1711.08189) reasonablely.
+Push Version has used the gpu_atomic_add, so, there is no data confliction in CUDA parallel process.
+
+The performance difference of Push Version and Pull version seems that the push version is trained on two GTX1080Ti, its training scale is 800~1024, while the Pull Version is trained on two GTX1080, its training scale is 800~960.
 
 -----------------------------------
 
